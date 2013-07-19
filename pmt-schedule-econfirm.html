@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" /><meta name="apple-mobile-web-app-title" content="BGE" /><title>
+	Edit Payment Schedule Confirmation
+</title>    	
+
+
+	
+	<!--link rel="stylesheet" type="text/css" href="css/jqmobile-130.css" />
+	<link rel="stylesheet" type="text/css" href="css/jqm-demos.css"/-->
+	<link rel="stylesheet" type="text/css" href="css/bgemobile.css" /><link rel="stylesheet" href="css/jquery.mobile.structure-1.3.1.min.css" /><link rel="stylesheet" type="text/css" href="css/main.css" /><link rel="stylesheet" type="text/css" href="js/datebox/jqm-datebox.min.css" />
+
+	
+
+
+	
+<script type="text/javascript"  src="js/jquery-191.js"></script>
+<script type="text/javascript"  src="js/jqmobile-131.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/additional-methods.min.js"></script>
+<script type="text/javascript" src="js/webtrends.lite.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/bge-forms.js"></script>
+<script type="text/javascript" src="js/bge.mobile.canp.js"></script>
+<script type="text/javascript" src="js/knockout-2.2.1.js"></script>
+<script type="text/javascript" src="js/kmap.js"></script>
+<script type="text/javascript" src="js/datebox/jqm-datebox.core.min.js"></script>
+<script type="text/javascript" src="js/datebox/jqm-datebox.mode.calbox.min.js"></script>
+<script type="text/javascript" src="js/datebox/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+
+</head>
+<body>
+ 
+<div data-role="page" id="billing-editschconfirm-page" selectnav='myaccountp' authpage='true'>
+
+
+<div data-role="panel" id="panel" class="bgepanel">
+	<ul data-role="listview" data-theme="e" data-divider-theme="e" data-icon="false" data-global-nav="BGEMobile">
+				<li style="height:50px">
+					<span class="ui-icon ui-icon-home ui-icon-shadow" style="float:left;margin-top:15px">&nbsp;</span>
+					<a style="color:#fff !important" href="#" onClick="javascript:pageTranslate('home');return false;">Home</a>
+				</li>
+		     
+                <li class="lisignout" style="display:none">
+					<a href="#" onClick="javascript:FedLogout();return false;" data-transition="slide">Sign Out</a>
+				</li>
+			
+
+			<li data-role="list-divider">Account Services</li>
+				<li>
+					<a href="#" onClick="javascript:pageTranslate('myaccountp');return false;">My Account</a>
+				</li>
+				<li>
+					<a href="#" onClick="javascript:pageTranslate('makeapayment');return false;">Make a Payment</a>
+				</li>				
+				<li>
+					<a href="#" onClick="javascript:pageTranslate('myprograms');return false;">My Programs</a>
+				</li>
+				<li>
+					<a href="#" onClick="javascript:pageTranslate('myenergyuse');return false;">My Energy Use</a>
+				</li>
+		
+	         <li data-role="list-divider">Settings</li>
+             <li>
+					<a href="#" onClick="javascript:pageTranslate('myprofile');return false;">My Profile</a>
+				</li>
+             <li>
+					<a href="#" onClick="javascript:pageTranslate('mynotifications');return false;">My Notifications</a>
+				</li>
+				
+            
+			<li data-role="list-divider">Outages</li>
+                 <li>
+					<a href="#" onClick="javascript:OutagesClick();return false;">Report an Outage</a>
+				</li>
+                <li>
+					<a href="#"  onClick="javascript:pageTranslate('outages');return false;">Current Outage Status</a>
+				</li>				
+				<li>
+					<a href="http://outagemap.bge.com/m.html">View Outage Map</a>
+				</li>
+		
+
+			<li data-role="list-divider">Support</li>
+                <li>
+					<a href="#" onClick="javascript:pageTranslate('aboutus');return false;" >About us</a>
+				</li>	
+				<li>
+					<a href="#" onClick="javascript:ContactClick();return false;">Contact us</a>
+				</li>							
+			</ul>
+
+
+</div> <!-- /panel -->
+
+<div data-role="header" class="bgeheader">
+	<a href="#panel" class="panel-go"  data-role="none"></a>
+	<div class="center-wrapper"><div class="logo" onClick="javascript:pageTranslate('home');return false;"></div></div>     
+	<a data-rel="popup" href="#global-notify"  data-role="none" class="notif-on" data-position-to="window" data-bind="visible:globalAlert() !='ERROR'"></a>
+</div>
+<div data-role="content" class="notif-alert notify-alert" data-bind="visible:!alertClosed() && accountalert()!= '' && accountalert()!= 'NO_MESSAGE'">
+				<i class="sprites close-icon-sm"></i>
+				<p class="accountNotifMsg" data-bind="html:accountalert()"></p>
+</div>			
+
+<div data-role="content">
+ 
+ 	<h2>CONFIRM PAYMENT INFORMATION</h2>
+
+
+							<div class="border-container">		
+                                <div class="service-account">
+                                    <span><strong>Account #: </strong><span data-bind="text:accountSummary.AccountId"></span>
+                                    <p data-bind="visible:accountSummary.MailAddress[0] != null, text:accountSummary.MailAddress[0]"></p>              
+                                          
+                                                      <ul class="bullet hbullet" data-bind="visible:disconnectnotice">
+                                                       <li class="ExemptionNotice" >
+                                                                                               DISCONNECT NOTICE ISSUED
+                                                                                         </li>
+                                                                                         <li>
+                                                                                               <a data-rel="popup" href="#disconnectnotice">
+                                                                                                                        More Information
+                                                                                                        </a>
+
+                                                                                        </li>   
+                                                       </ul>                        
+		                                       
+                                    </div>  
+                                     <h3>EDIT SCHEDULED PAYMENT DETAILS</h3>
+						           <ul data-role="listview" data-inset="true" class="minpad">
+							            <li>
+								            <label>Payment Account</label>
+								            <span class="fontregular rightalign" data-bind="text:selectedAccount().nickName()"></span>
+							            </li>
+							            <li>
+								            <label>Bank Account Holder Name</label>
+								            <span class="fontregular rightalign" data-bind="text:selectedAccount().accountHolderName()"></span>
+							            </li>
+							            <li>
+								            <label>Bank Account Type</label>
+								            <span class="fontregular rightalign" data-bind="text:selectedAccount().type()"></span>
+							            </li>
+							            <li>
+								            <label>Masked Account Number</label>
+								            <span class="fontregular rightalign texttransform" data-bind="text:selectedAccount().maskedAccountNumber()"></span>
+							            </li>
+							            <li>
+								            <label>Routing number</label>
+								            <span class="fontregular rightalign" data-bind="text:selectedAccount().routingNumber()" ></span>
+							            </li>
+							            
+							            <li>
+								            <label>Payment Date</label>
+								            <span class="fontregular rightalign" data-bind="text:selectedPayment().date()"></span>
+							            </li>							            
+							             <li>
+								            <label>Payment Amount</label>
+								            <span class="fontregular rightalign" data-bind="text: formatCurrency(selectedPayment().amount())" ></span>
+							            </li>
+						            </ul>
+                            <fieldset style="text-align:left">
+	                            <p>Please note that any payment made for less than the total amount due or after the indicated due date may result in your service being disconnected.</p>
+                            </fieldset>
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<a data-role="button" data-theme="a" href="#" data-bind="click: editschedulePayment" data-transition="slide">
+										CONFIRM PAYMENT
+									</a>
+								</div>
+								<div class="ui-block-b">
+									<a data-role="button" href="billing.html"   data-transition="slide" >
+										CANCEL
+									</a>
+								</div>	   
+							</fieldset>
+					</div>
+
+   
+</div>
+
+	
+<div data-role="content">
+        <div class="indexicons" style="display:none">
+                <a href="#" onclick="javascript:viewFullSite();return false;" data-role="button" data-inline="true" data-icon="full-site" >View Full Site</a>
+                <a data-role="button" data-inline="true" data-icon="contact-us"  href="#" onclick="javascript:ContactClick();return false;">Contact Us</a>                
+            </div>	
+	<div class="social">
+
+				<a href="http://facebook.com/" target="new" class="facebook"></a>
+
+				<a href="http://twitter.com/mybge" target="new" class="flickr"></a>
+
+				<a href="http://twitter.com/mybge" target="new" class="twitter"></a>
+
+				<a href="http://youtube.com/" target="new" class="youtube"></a>
+
+				<a href="http://twitter.com/mybge" target="new" class="linkedin"></a>
+
+			</div>
+            <div class="fullsite">
+                <a  href="#" onclick="javascript:viewFullSite();return false;" >View Full Site</a> |
+                <a  href="#" onclick="javascript:ContactClick();return false;">Contact Us</a> 
+                
+            </div>
+
+	<p class="legal">&copy; 2013 Baltimore Gas and Electric Company.  All Rights Reserved.</p>
+
+</div><!-- /footer -->
+<!-------Dialogs----->
+
+<div  data-role="popup" id="global-notify" class="globalalert" data-overlay-theme="a" style="background:rgb(254, 247, 190)">
+	<a href="#" data-rel="back" data-role="button" data-theme="c" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+    <p style="margin:10px" data-bind="html:globalAlert()"></p>
+</div>
+
+
+<div data-role="popup" data-overlay-theme="a" id="disconnectnotice" style="width:250px; max-width:350px;"  data-dismissible="false" >
+	
+		<div data-role="header">
+			<h1 class="popup">Disconnect Notice</h1>
+		</div>
+		<div class="border-container">
+			<p data-bind="text:findGetMessage('DisconnectNotice_MSG')"></p>
+			<a data-bind="attr: { href:findGetMessage('DisconnectNotice_URL')}" onclick="javascript:viewFullSite();" data-role="button" data-theme="a">OK</a>       
+			<a href="#" data-role="button" data-rel="back" data-theme="c">CANCEL</a> 
+		</div>
+	</div>
+	
+
+</div><!-- /page -->
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+ <Module Name="BgeMobile_js" RootWebOnly="TRUE" Url="Style Library/Bge Mobile/js" xmlns="http://schemas.microsoft.com/sharepoint/" >
+<File Name="webtrends.lite.min.js" Path="js\webtrends.lite.min.js" Type="GhostableInLibrary" Url="webtrends.lite.min.js" />
+<File Name="jqmobile-131.js" Path="js\jqmobile-131.js" Type="GhostableInLibrary" Url="jqmobile-131.js" />
+<File Name="jquery-191.js" Path="js\jquery-191.js" Type="GhostableInLibrary" Url="jquery-191.js" />
+<File Name="main.js" Path="js\main.js" Type="GhostableInLibrary" Url="main.js" />
+<File Name="bge-forms.js" Path="js\bge-forms.js" Type="GhostableInLibrary"  Url="bge-forms.js" />
+<File Name="bge.mobile.canp.js" Path="js\bge.mobile.canp.js" Type="GhostableInLibrary" Url="bge.mobile.canp.js" />
+<File Name="additional-methods.min.js" Path="js\additional-methods.min.js" Type="GhostableInLibrary" Url="additional-methods.min.js" />
+<File Name="jquery.validate.min.js" Path="js\jquery.validate.min.js" Type="GhostableInLibrary" Url="jquery.validate.min.js" />
+<File Name="maskedinput.js" Path="js/maskedinput.js" Type="GhostableInLibrary" Url="maskedinput.js" />
+<File Name="kmap.js" Path="js\kmap.js" Type="GhostableInLibrary" Url="kmap.js" />
+<File Name="knockout-2.2.1.js" Path="js\knockout-2.2.1.js" Type="GhostableInLibrary" Url="knockout-2.2.1.js" />
+</Module>
+</Elements>

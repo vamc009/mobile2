@@ -1,0 +1,203 @@
+﻿body {font: normal 14px/20px "Helvetica Neue", helvetica, arial, sans-serif;}
+
+/** Regular **/
+
+.ui-icon, .sprites, input.search:after, .multi-list li:after, .signin-controls li:before #service-account .back-accounts:before {background: url('/mobile/Style Library/Bge Mobile/images/sprites.png') no-repeat; display: block; position: relative;}
+.logo         	  {background-position: 0 -3px; width: 76px; height: 35px;}
+.notif-on     	  {background-position: -139px 0; width: 28px; height: 30px;}
+.ui-icon-outage 		  {}
+.ui-icon-outage-map   	  {background-position: -94px -34px; width: 89px; height: 89px;}
+.ui-icon-outage-map-sm    {background-position: -256px -64px; width: 27px; height: 26px;}
+.ui-icon-account      	  {background-position: 0 -128px; width: 89px; height: 89px;}
+.ui-icon-account-sm       {background-position: -197px -64px; width: 27px; height: 26px;}
+.ui-icon-make-payment 	  {background-position: -94px -128px; width: 90px; height: 89px;}
+.ui-icon-make-payment-sm  {background-position: -226px -63px; width: 27px; height: 26px;}
+.ui-icon-notifications-sm {background-position: -244px -85px; width: 34px; height: 34px;}
+.ui-icon-full-site    	  {background-position: -81px -3px; width: 25px; height: 25px;}
+.ui-icon-contact-us   	  {background-position: -112px -6px; width: 18px; height: 18px;}
+.facebook     	  {background-position: -195px -123px; width: 34px; height: 33px;}
+.flickr			  {background-position: -231px -123px; width: 34px; height: 33px;}
+.twitter      	  {background-position: -267px -122px; width: 33px; height: 35px;}
+.youtube      	  {background-position: -195px -158px; width: 34px; height: 33px;}
+.linkedin	      {background-position: -232px -158px; width: 33px; height: 35px;}
+.ui-icon-arrow-r      	  {background-position: -282px -34px; width: 10px; height: 14px;}
+
+/** Retina / HD **/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), (-ms-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi), only screen and (min-device-pixel-ratio: 1.5) {	
+	.ui-icon, .sprites, input.search:after, .multi-list li:after, .signin-controls li:before #service-account .back-accounts:before {background: url('/mobile/Style Library/Bge Mobile/images/sprites2x.png') no-repeat; background-size: 300px 230px; display: block; position: relative;}
+	.logo         	  {background-position: 0 -3px; width: 76px; height: 35px;}
+	.notif-on     	  {background-position: -139px 0; width: 28px; height: 30px;}
+	.outage 		  {}
+	.ui-icon-outage-map   	  {background-position: -94px -34px; width: 89px; height: 89px;}
+	.ui-icon-outage-map-sm    {background-position: -256px -64px; width: 27px; height: 26px;}
+	.ui-icon-account      	  {background-position: 0 -128px; width: 89px; height: 89px;}
+	.ui-icon-account-sm       {background-position: -197px -64px; width: 27px; height: 26px;}
+	.ui-icon-make-payment 	  {background-position: -94px -128px; width: 90px; height: 89px;}
+	.ui-icon-make-payment-sm  {background-position: -226px -63px; width: 27px; height: 26px;}
+	.ui-icon-notifications-sm {background-position: -244px -85px; width: 34px; height: 34px;}
+	.ui-icon-full-site    	  {background-position: -81px -3px; width: 25px; height: 25px;}
+	.ui-icon-contact-us   	  {background-position: -109px -3px; width: 25px; height: 25px;}
+	.facebook     	  {background-position: -195px -123px; width: 34px; height: 33px;}
+	.flickr			  {background-position: -231px -123px; width: 34px; height: 33px;}
+	.twitter      	  {background-position: -267px -122px; width: 33px; height: 35px;}
+	.youtube      	  {background-position: -195px -158px; width: 34px; height: 33px;}
+	.linkedin	      {background-position: -232px -158px; width: 33px; height: 35px;}
+	.ui-icon-arrow-r      	  {background-position: -282px -34px; width: 10px; height: 14px;}
+}
+
+.ui-page {
+ 	background: 405167 !important;
+}
+
+/*navigation bar*/
+.narrowbar{height:50px;}
+.ui-navbar .ui-btn-text { font-size:10px; }
+
+/*Container*/
+.border-container {min-height: 80px; background: #fff; border-radius: 6px; overflow: hidden; border:6px solid #677383; margin: 14px; padding:0px}
+.contentOffset {margin: 0 10px 20px;}
+.alignContainer{margin:15px !important}
+
+
+/*hearder styles*/
+ h1 {font-size: 16px; line-height: 24px; font-weight: bold; padding: 10px 10px 15px;}
+ h2{font-size: 16px; line-height: 24px; font-weight: bold; margin:0px}
+ h3{font-size: 14px;  font-weight: bold; }
+
+
+
+/********Account Summary*************/
+.service-account {position: relative; margin: 0 0 15px; padding: 10px; background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f6f6f6), color-stop(1, #f2f2f2)); background-image: -ms-linear-gradient(top, #f6f6f6, #f2f2f2); border-bottom: 1px solid #d8d8d8;}
+.select-account {position: absolute; top: 10px; right: 10px; width: 120px; text-align: center; font-size: 12px; line-height: 16px; color: #333;}
+
+
+/* Grid used for payment*/
+.bgegrid {margin: 0 10px 20px;}
+.bgegrid ul {border: 1px solid #aaa; border-radius: 6px; list-style-type: none; padding:0px}
+.bgegrid  li {overflow: hidden; line-height: 36px; padding: 0 10px; border-bottom: 1px solid #aaa; }
+.bgegrid  li:last-child {border-bottom: none;}
+.bgegrid  li label {float: left;}
+.bgegrid  li span{float: right;}
+
+ 
+ 
+ /*Footer links etc*/
+.quick-links{ text-align:center}
+
+.social {overflow: visible; width: 290px; height: 35px; margin: 24px auto 4px;}
+.social > a {float: left; margin-right: 23px; border-radius: 2em;}
+
+.legal {display: block; margin-top: 10px; text-align: center; font-size: 10px; line-height: 14px; color: #fff; text-shadow: 0 1px #233a28;}
+
+
+
+.ui-btn-text {font-size: 12px;}
+
+.multi-btn {height: 40px;}
+.multi-btn > .ui-btn {width: 49%; }
+.multi-btn > *:first-child {float: left;}
+.multi-btn > *:last-child {float: right;}
+
+.multi-list {margin: 10px 14px;}
+.multi-list li {position: relative; background: #fcfcfc; padding: 6px 10px; margin: 0 0 5px; border-radius: 6px; list-style: none;}
+.multi-list li:active {background: #fff;}
+.multi-list li:after {content: ""; position: absolute; background-position: -282px -34px; width: 10px; height: 14px; top: 29px; right: 20px;}
+.multi-list li span {display: block; text-shadow: 0 1px #fff;}
+.multi-list li .acct-number {color: #333; font-weight: bold; margin: 0 0 2px;}
+.multi-list li address {color: #939393; font-size: 13px; line-height: 18px;}
+
+#service-account {position: relative; margin: 0 0 15px; padding: 10px; background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f6f6f6), color-stop(1, #f2f2f2)); background-image: -ms-linear-gradient(top, #f6f6f6, #f2f2f2); border-bottom: 1px solid #d8d8d8;}
+#service-account .back-accounts {position: absolute; top: 10px; right: 10px; width: 80px; text-align: center; font-size: 12px; line-height: 16px; color: #333;}
+#service-account h2 {color: #333; font-weight: bold; text-shadow: 0 1px #fff;}
+#service-account address {color: #939393; text-shadow: 0 1px #fff; font-size: 12px; line-height: 16px;}
+#service-account span {font-size: 12px; color: #666; display: block; line-height: 18px;}
+#service-account span strong {font-weight: bold;}
+#service-account span strong a {color: inherit;}
+
+#payment-overview {margin: 0 10px 20px;}
+#payment-overview h3 {font-weight: bold; color: #333; padding: 0 0 5px;}
+#payment-overview div {margin: 0 0 10px;}
+#payment-overview div ul {border: 1px solid #aaa; border-radius: 6px; list-style: none;}
+#payment-overview div li {overflow: hidden; line-height: 36px; padding: 0 10px; border-bottom: 1px solid #aaa; box-shadow: inset 0 0 10px rgba(136,136,136,.15);}
+#payment-overview div li:last-child {border-bottom: none;}
+#payment-overview div li label {float: left; color: #939393; font-size: 12px;}
+#payment-overview div li span {float: right; font-size: 13px; color: #777;}
+#payment-overview div li .amount {color: #05b61e; font-weight: bold;}
+
+/************
+ *	
+ *	Colors
+ *
+ ************/
+ 
+textarea.valid:not(:disabled),
+input.valid:not(:disabled){
+	 border: 2px solid #63a157;
+ }
+
+ .green{
+	 color: #63a157;
+ }
+ 
+ label.error,
+ .red{
+	 color: #ff0000;
+	 margin-top: .2em;
+ }
+ 
+ textarea.error,
+ input.error{
+	 border: 2px solid #ff0000;
+ }
+ 
+ .bge-error{
+	color: #ff0000;
+ }
+ 
+ .white{
+	color: #ffffff;
+	text-shadow: 0 1px 0 #333;
+ }
+ 
+ .black{
+ 	color: #000000 !important;
+ }
+ 
+ .underline{
+	 text-decoration: underline;
+ }
+ 
+ .disclaimer{
+	 color: #999999;
+ }
+
+ /*********************
+ *
+ *  Contact Form Logic 
+ *
+ **********************/
+ 
+.form-section-comments,
+.form-section-light-details,
+.form-section-location-of-problem,
+.contact-form-wrapper .enter-location-details,
+.phone-number-for-access-container {
+	display: none;
+}	
+
+
+.form-section-comments .form-info {
+	display:block;
+	text-align: center;
+	font-weight: bold;
+	margin: 0 auto 15px;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+textarea[name=comments] {
+	height: 180px;
+}
+
+.loc-numbers {text-align: center; margin: 0 0 20px; background: #eee; padding: 2px 0; border: 1px solid #333; border-radius: 4px; text-shadow: 0 1px #fff;}
+

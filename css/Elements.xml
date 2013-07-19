@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+ <Module Name="BgeMobile_css" RootWebOnly="TRUE" Url="Style Library/Bge Mobile/css" xmlns="http://schemas.microsoft.com/sharepoint/">
+<File Name="main.css" Path="css\main.css" Type="GhostableInLibrary" Url="main.css" />
+<File Name="bgemobile.css" Path="css\bgemobile.css" Type="GhostableInLibrary"  Url="bgemobile.css" />
+<File Name="jquery.mobile.structure-1.3.1.min.css" Path="css\jquery.mobile.structure-1.3.1.min.css" Type="GhostableInLibrary"  Url="jquery.mobile.structure-1.3.1.min.css" />
+<File Path="css\NewTemplate.css" Url="css/NewTemplate.css" />
+<File Path="css\jqmobile.structure-130.css" Url="css/jqmobile.structure-130.css" />
+<File Path="css\jqmobile-130.css" Url="css/jqmobile-130.css" />
+<File Path="css\jqm-demos.css" Url="css/jqm-demos.css" />
+<File Path="css\bgemain.css" Url="css/bgemain.css" />
+<File Path="css\bge.temp.min.css" Url="css/bge.temp.min.css" />
+<File Name="icons-18-black.png" Path="css\images\icons-18-black.png" Url="icons-18-black.png" Type="GhostableInLibrary" />
+<File Name="icons-18-white.png" Path="css\images\icons-18-white.png" Url="icons-18-white.png" Type="GhostableInLibrary"/>
+<File Name="icons-36-black.png" Path="css\images\icons-36-black.png" Url="icons-36-black.png" Type="GhostableInLibrary"/>
+<File Name="icons-36-white.png" Path="css\images\icons-36-white.png" Url="icons-36-white.png" Type="GhostableInLibrary"/>
+</Module>
+</Elements>

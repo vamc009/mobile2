@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" /><meta name="apple-mobile-web-app-title" content="BGE" /><title>
+	Contact Form
+</title>    	
+
+
+	
+	<!--link rel="stylesheet" type="text/css" href="css/jqmobile-130.css" />
+	<link rel="stylesheet" type="text/css" href="css/jqm-demos.css"/-->
+	<link rel="stylesheet" type="text/css" href="css/bgemobile.css" /><link rel="stylesheet" href="css/jquery.mobile.structure-1.3.1.min.css" /><link rel="stylesheet" type="text/css" href="css/main.css" /><link rel="stylesheet" type="text/css" href="js/datebox/jqm-datebox.min.css" />
+
+	
+
+
+	
+<script type="text/javascript"  src="js/jquery-191.js"></script>
+<script type="text/javascript"  src="js/jqmobile-131.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/additional-methods.min.js"></script>
+<script type="text/javascript" src="js/webtrends.lite.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/bge-forms.js"></script>
+<script type="text/javascript" src="js/bge.mobile.canp.js"></script>
+<script type="text/javascript" src="js/knockout-2.2.1.js"></script>
+<script type="text/javascript" src="js/kmap.js"></script>
+<script type="text/javascript" src="js/datebox/jqm-datebox.core.min.js"></script>
+<script type="text/javascript" src="js/datebox/jqm-datebox.mode.calbox.min.js"></script>
+<script type="text/javascript" src="js/datebox/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+
+</head>
+<body>
+ 
+<div data-role="page" id="contact-form-page">
+
+
+<div data-role="panel" id="panel" class="bgepanel">
+	<ul data-role="listview" data-theme="e" data-divider-theme="e" data-icon="false" data-global-nav="BGEMobile">
+				<li style="height:50px">
+					<span class="ui-icon ui-icon-home ui-icon-shadow" style="float:left;margin-top:15px">&nbsp;</span>
+					<a style="color:#fff !important" href="#" onClick="javascript:pageTranslate('home');return false;">Home</a>
+				</li>
+		     
+                <li class="lisignout" style="display:none">
+					<a href="#" onClick="javascript:FedLogout();return false;" data-transition="slide">Sign Out</a>
+				</li>
+			
+
+			<li data-role="list-divider">Account Services</li>
+				<li>
+					<a href="#" onClick="javascript:pageTranslate('myaccountp');return false;">My Account</a>
+				</li>
+				<li>
+					<a href="#" onClick="javascript:pageTranslate('makeapayment');return false;">Make a Payment</a>
+				</li>				
+				<li>
+					<a href="#" onClick="javascript:pageTranslate('myprograms');return false;">My Programs</a>
+				</li>
+				<li>
+					<a href="#" onClick="javascript:pageTranslate('myenergyuse');return false;">My Energy Use</a>
+				</li>
+		
+	         <li data-role="list-divider">Settings</li>
+             <li>
+					<a href="#" onClick="javascript:pageTranslate('myprofile');return false;">My Profile</a>
+				</li>
+             <li>
+					<a href="#" onClick="javascript:pageTranslate('mynotifications');return false;">My Notifications</a>
+				</li>
+				
+            
+			<li data-role="list-divider">Outages</li>
+                 <li>
+					<a href="#" onClick="javascript:OutagesClick();return false;">Report an Outage</a>
+				</li>
+                <li>
+					<a href="#"  onClick="javascript:pageTranslate('outages');return false;">Current Outage Status</a>
+				</li>				
+				<li>
+					<a href="http://outagemap.bge.com/m.html">View Outage Map</a>
+				</li>
+		
+
+			<li data-role="list-divider">Support</li>
+                <li>
+					<a href="#" onClick="javascript:pageTranslate('aboutus');return false;" >About us</a>
+				</li>	
+				<li>
+					<a href="#" onClick="javascript:ContactClick();return false;">Contact us</a>
+				</li>							
+			</ul>
+
+
+</div> <!-- /panel -->
+
+<div data-role="header" class="bgeheader">
+	<a href="#panel" class="panel-go"  data-role="none"></a>
+	<div class="center-wrapper"><div class="logo" onClick="javascript:pageTranslate('home');return false;"></div></div>     
+	<a data-rel="popup" href="#global-notify"  data-role="none" class="notif-on" data-position-to="window" data-bind="visible:globalAlert() !='ERROR'"></a>
+</div>
+<div data-role="content" class="notif-alert notify-alert" data-bind="visible:!alertClosed() && accountalert()!= '' && accountalert()!= 'NO_MESSAGE'">
+				<i class="sprites close-icon-sm"></i>
+				<p class="accountNotifMsg" data-bind="html:accountalert()"></p>
+</div>			
+
+<div data-role="content">
+
+    <h2>CONTACT US</h2>
+
+<div class="border-container">
+
+<div>
+<div id="contact-form-container" class="bge-form-wrapper">
+<form id="contact-form" method="post" data-transition="slide">
+<div class="about-you recognized">
+	<h3 class="habtu" >About You</h3>	
+	<p class="precords">Our records show that, based on the information you provided, your BGE 
+	account services the following:</p>
+<div id="contactserviceaccount" class="service-account" style="margin-left:-10px;margin-right:-10px;">
+</div>
+<p class="pauth" >If you want to contact us for a different address other than your home,  <a style="color: blue; font-size: 13px;" href="#" class="form_manualentry" data-theme="a" data-transition="slide" data-direction="reverse" >
+please enter it manually</a>.			
+</p>
+
+
+	<div class="your-account-details">
+		<ul class="info" style="padding-left:0px" >
+		<li class="your-phone-info"><strong><label>Phone Number: </label></strong><span id="con_entered_phone" class="reginfo"></span></li>
+		<li class="your-account-info"><strong><label>Account Number: </label></strong><span id="con_entered_account" class="reginfo"></span></li>
+		<li class="your-address-info"><label></label><span id="con_selected_address" class="reginfo"></span></li>
+		 </ul>
+		<p class="disclaimer tablet-indent">* For security reasons only a 
+		partial address is shown.</p>
+		<p>If this does not appear to be your account please <a style="color: blue; font-size: 13px;" href="/mobile/Pages/contactus.html" data-transition="slide" data-direction="reverse">
+		modify your information</a>.</p>
+		
+		<p>If this is the wrong address or you cannot identify your address,  <a style="color: blue; font-size: 13px;" href="#" class="form_manualentry" data-theme="a" data-transition="slide" data-direction="reverse" >
+		please enter it manually.</a>			
+		</p>
+		
+	</div>
+<div><ul style="padding:0px;">
+<li>
+				<input type="email" name="email" id="email" value="" placeholder="Email" class="reginfo" />
+</li>
+</ul>
+</div>
+</div>
+<div class="about-you unrecognized">
+		<h3>About You</h3>
+		
+		<div id="unrecognized_message" class="unrecognized_message">
+				<p>We were unable to locate your account with the information 
+				you provided, Please  <a style="color: blue; font-size: 13px;" href="/mobile/Pages/contactus.html" data-transition="slide" data-direction="reverse">
+				modify your information</a>  or continue with the form below.</p>
+		</div>
+				
+			<input type="text" name="first_name" id="first_name" value="" placeholder="First Name" class="unreginfo" />
+		
+			<input type="text" name="last_name" id="last_name" value="" placeholder="Last Name" class="unreginfo"/>
+		
+			<label for="account_number" class="ui-hidden-accessible">BGE Account 
+			Number:</label>
+			<input type="tel" name="account_number" id="account_number" value="" placeholder="BGE Account #" maxlength="10" class="unreginfo"  />
+		
+			<label for="email" class="ui-hidden-accessible">Email:</label>
+			<input type="email" name="email_ureg" id="email_ureg" value="" placeholder="Email" class="unreginfo" />
+			<label for="phone" class="ui-hidden-accessible">Phone Number:</label>
+			<input type="tel" name="phone" id="phone" class="telephone unreginfo" value="" placeholder="Phone #"/>
+		
+</div>
+<div>
+	<label for="purpose_of_communication" class="ui-hidden-accessible">Purpose 
+	of Communication:</label>
+	<select name="purpose_of_communication" id="purpose_of_communication" data-native-menu="false" class="purpose-of-communication">
+		<option value="" selected="selected">Select Purpose of Communication</option> 
+		<option value="CUAI">Account Inquiries</option>
+		<option value="CUBI">Billing Inquiries</option> 
+		<option value="CUBU">Business Inquiries</option> 
+		<option value="CULO">Lighting Outages</option>
+		<option value="CUOA">Online Account Access</option> 
+		<option value="CUPE">Payment Extension Request</option>
+		<option value="CUSE">Smart Energy/Conservation</option>
+		<option value="CUSI">Supplier Inquiries</option>
+		<option value="CUVT">Vegetation/Tree Trimming</option> 
+		<option value="CUOT">Other</option>
+	</select>
+</div>
+
+<div class="form-section-location-of-problem">
+	<h3>Location</h3>
+	    <fieldset data-role="controlgroup" data-type="vertical">
+	        <input id="radio1" name="location_problem" value="location-is-service-address" type="radio">
+	        <label for="radio1">
+	            Use the Address where I receive BGE service
+	        </label>
+	        <input id="radio3" name="location_problem" value="location-is-different-address" type="radio">
+	        <label for="radio3">
+	            Use a Different Address
+	        </label>
+	    </fieldset>        
+	<div class="enter-location-details">
+         
+		
+			<label for="street_address" class="ui-hidden-accessible">Street Address:</label>
+			<input type="text" name="street_address" id="street_address" value="" placeholder="Street Address or Intersection" class="altAddress" />
+		
+		
+		
+			<label for="nearest_area" class="ui-hidden-accessible">Nearest Public Area:</label>
+			<input type="text" name="nearest_area" id="nearest_area" value="" placeholder="Nearest Public Area (&quot;Patterson Park&quot;, etc.)" class="altAddress"  />
+		
+		
+		
+			<label for="city" class="ui-hidden-accessible">City:</label>
+			<input type="text" name="city" id="city" value="" placeholder="City" class="altAddress" />
+		
+		
+		
+		
+			<label for="state" class="ui-hidden-accessible">State:</label>
+			<input type="text" name="state" id="state" value="Maryland" readonly="readonly" placeholder="State" class="altAddress" />
+		
+		
+		
+			<label for="zip" class="ui-hidden-accessible">Zip Code:</label>
+			<input type="tel" name="zip" id="zip" value="" placeholder="Zip Code" maxlength="5" class="altAddress" />
+		
+    </ul>
+	</div>
+</div>
+<div class="form-section-light-details">
+	<h3>Light Details</h3>
+	
+    
+		<label>
+			<input type="checkbox" name="requires_special_access" id="requires_special_access" /> 
+			Requires Special Access
+		</label>
+	
+	<div class="phone-number-for-access-container">
+		<label for="phone_number_for_access" class="ui-hidden-accessible">Phone 
+		Number For Access:</label>
+		<input type="tel" name="phone_number_for_access" id="phone_number_for_access" class="phone-number-for-access telephone lightoutage" value="" placeholder="Phone # for access"  />
+	</div>
+	<h3>Type of Light</h3>
+	
+		
+		     	<input type="radio" name="type_of_light"  id="type_of_light_public" value="Public Street"/>
+		     	<label for="type_of_light_public">Public Street</label>
+    	
+		     	<input type="radio" name="type_of_light"  id="type_of_light_private" value="Private Street or Area" />
+		     	<label for="type_of_light_private">Private Street or Area</label>
+		
+		     	<input type="radio" name="type_of_light" id="type_of_light_other" value="Other" class="lightoutage" />
+		     	<label for="type_of_light_other">Other</label>
+		     		
+		     	<input type="text" name="other_description" id="other_description" value="" placeholder="Other Type" />
+	            
+	
+<div>
+		<label for="issue_type" class="ui-hidden-accessible">Issue Type:</label>
+		<select name="issue_type" id="issue_type" data-native-menu="false" class="lightoutage">
+			<option value="" selected="selected" >Issue Type</option> 
+			<option value="entire-block-out">Entire Block Out</option>
+			<option value="flickering">Flickering</option>
+			<option value="globe-missing">Globe Missing</option>
+			<option value="hazard">Hazard</option>
+			<option value="lit-constantly">Lit Constantly</option>
+			<option value="multiple-lights-out">Multiple Lights Out</option>
+			<option value="single-light-out">Single Light Out</option>
+			<option value="other">Other</option>
+		</select>
+</div>
+	
+		<label for="light_pole_number" class="ui-hidden-accessible">Light Pole 
+		Number:</label>
+		<input type="text" name="light_pole_number" id="light_pole-number" value="" placeholder="Light Pole #" class="lightoutage" />
+	
+</div>
+
+<div class="form-section-comments">
+	<br />   
+		<label for="comments" class="ui-hidden-accessible">Enter Comment:</label>
+		<textarea name="comments" id="comments" placeholder="Enter Comment"></textarea>
+   </div>
+<div class="btn">
+<button data-role="button" data-theme="a" type="submit">SUBMIT</button>
+</div>
+<ul  class="bullet hbullet"><li><a  href="locations-pnumbers.html" data-transition="slide" class="ui-link" data-inline="true">Location & Phone Numbers</a></li></ul>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+	
+<div data-role="content">
+        <div class="indexicons" style="display:none">
+                <a href="#" onclick="javascript:viewFullSite();return false;" data-role="button" data-inline="true" data-icon="full-site" >View Full Site</a>
+                <a data-role="button" data-inline="true" data-icon="contact-us"  href="#" onclick="javascript:ContactClick();return false;">Contact Us</a>                
+            </div>	
+	<div class="social">
+
+				<a href="http://facebook.com/" target="new" class="facebook"></a>
+
+				<a href="http://twitter.com/mybge" target="new" class="flickr"></a>
+
+				<a href="http://twitter.com/mybge" target="new" class="twitter"></a>
+
+				<a href="http://youtube.com/" target="new" class="youtube"></a>
+
+				<a href="http://twitter.com/mybge" target="new" class="linkedin"></a>
+
+			</div>
+            <div class="fullsite">
+                <a  href="#" onclick="javascript:viewFullSite();return false;" >View Full Site</a> |
+                <a  href="#" onclick="javascript:ContactClick();return false;">Contact Us</a> 
+                
+            </div>
+
+	<p class="legal">&copy; 2013 Baltimore Gas and Electric Company.  All Rights Reserved.</p>
+
+</div><!-- /footer -->
+<!-------Dialogs----->
+
+<div  data-role="popup" id="global-notify" class="globalalert" data-overlay-theme="a" style="background:rgb(254, 247, 190)">
+	<a href="#" data-rel="back" data-role="button" data-theme="c" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+    <p style="margin:10px" data-bind="html:globalAlert()"></p>
+</div>
+
+
+<div data-role="popup" data-overlay-theme="a" id="disconnectnotice" style="width:250px; max-width:350px;"  data-dismissible="false" >
+	
+		<div data-role="header">
+			<h1 class="popup">Disconnect Notice</h1>
+		</div>
+		<div class="border-container">
+			<p data-bind="text:findGetMessage('DisconnectNotice_MSG')"></p>
+			<a data-bind="attr: { href:findGetMessage('DisconnectNotice_URL')}" onclick="javascript:viewFullSite();" data-role="button" data-theme="a">OK</a>       
+			<a href="#" data-role="button" data-rel="back" data-theme="c">CANCEL</a> 
+		</div>
+	</div>
+	
+
+</div><!-- /page -->
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+ <Module Name="BgeMobile_images" RootWebOnly="TRUE" Url="Style Library/Bge Mobile/images" xmlns="http://schemas.microsoft.com/sharepoint/">
+<File Name="bg.png" Path="images\bg.png" Type="GhostableInLibrary" Url="bg.png" />
+<File Name="bg-2x.png" Path="images\bg-2x.png" Type="GhostableInLibrary" Url="bg-2x.png" />
+<File Name="sprites.png" Path="images\sprites.png" Type="GhostableInLibrary" Url="sprites.png" />
+<File Name="sprites2x.png" Path="images\sprites2x.png" Type="GhostableInLibrary" Url="sprites2x.png" />
+<File Name="notifications-icon.png" Path="images\notifications-icon.png" Type="GhostableInLibrary" Url="notifications-icon.png" />
+<File Name="notifications-icon-active.png" Path="images\notifications-icon-active.png" Type="GhostableInLibrary" Url="notifications-icon-active.png" />
+<File Name="loading.gif" Path="images\loading.gif" Type="GhostableInLibrary" Url="loading.gif" />
+<File Name="AstroIconSprite.png" Path="images\AstroIconSprite.png" Type="GhostableInLibrary" Url="AstroIconSprite.png" />
+<File Name="MeterImage.png" Path="images\MeterImage.png" Type="GhostableInLibrary" Url="MeterImage.png" />
+<File Name="noData.png" Path="images\noData.png" Type="GhostableInLibrary" Url="images/noData.png" />
+<File Name="edit.jpg" Type="GhostableInLibrary" Path="images\edit.jpg" Url="edit.jpg" />
+<File Name="dropdown.png" Path="images\dropdown.png" Type="GhostableInLibrary" Url="dropdown.png" />
+<File Name="ajax-loader.gif" Path="images\ajax-loader.gif" Type="GhostableInLibrary" Url="ajax-loader.gif" />
+<File Name="icons-18-white.png" Path="images\icons-18-white.png" Type="GhostableInLibrary" Url="icons-18-white.png" />
+<File Name="onetime.gif" Path="images\onetime.gif" Url="onetime.gif" Type="GhostableInLibrary"    />
+<File Name="reccurring.gif" Path="images\reccurring.gif" Url="reccurring.gif" Type="GhostableInLibrary" />
+<File Name="bge-logo.png" Path="images\bge-logo.png" Url="bge-logo.png" Type="GhostableInLibrary" />
+<File Name="wu-logo.png" Path="images\wu-logo.png" Url="wu-logo.png" Type="GhostableInLibrary" />
+<File Name="edit1.png" Path="images\edit1.png" Url="edit1.png" Type="GhostableInLibrary"/>
+<File Name="offline.png" Path="images\offline.png" Url="offline.png"  Type="GhostableInLibrary" />
+</Module>
+</Elements>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="js\" Type="ElementManifest" />
+    <ProjectItemFile Source="webtrends.lite.min.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="jqmobile-131.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-191.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="main.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="bge-forms.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="bge.mobile.canp.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="additional-methods.min.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery.validate.min.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="maskedinput.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="kmap.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="knockout-2.2.1.js" Target="js\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" /><meta name="apple-mobile-web-app-title" content="BGE" /><title>
+	Notification Preferences
+</title>    	
+
+
+	
+	<!--link rel="stylesheet" type="text/css" href="css/jqmobile-130.css" />
+	<link rel="stylesheet" type="text/css" href="css/jqm-demos.css"/-->
+	<link rel="stylesheet" type="text/css" href="css/bgemobile.css" /><link rel="stylesheet" href="css/jquery.mobile.structure-1.3.1.min.css" /><link rel="stylesheet" type="text/css" href="css/main.css" /><link rel="stylesheet" type="text/css" href="js/datebox/jqm-datebox.min.css" />
+
+	
+
+
+	
+<script type="text/javascript"  src="js/jquery-191.js"></script>
+<script type="text/javascript"  src="js/jqmobile-131.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/additional-methods.min.js"></script>
+<script type="text/javascript" src="js/webtrends.lite.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/bge-forms.js"></script>
+<script type="text/javascript" src="js/bge.mobile.canp.js"></script>
+<script type="text/javascript" src="js/knockout-2.2.1.js"></script>
+<script type="text/javascript" src="js/kmap.js"></script>
+<script type="text/javascript" src="js/datebox/jqm-datebox.core.min.js"></script>
+<script type="text/javascript" src="js/datebox/jqm-datebox.mode.calbox.min.js"></script>
+<script type="text/javascript" src="js/datebox/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+
+</head>
+<body>
+ 
+<div data-role="page" id="notificationsummary-page" selectnav='mynotifications' authpage='true'>
+
+
+<div data-role="panel" id="panel" class="bgepanel">
+	<ul data-role="listview" data-theme="e" data-divider-theme="e" data-icon="false" data-global-nav="BGEMobile">
+				<li style="height:50px">
+					<span class="ui-icon ui-icon-home ui-icon-shadow" style="float:left;margin-top:15px">&nbsp;</span>
+					<a style="color:#fff !important" href="#" onClick="javascript:pageTranslate('home');return false;">Home</a>
+				</li>
+		     
+                <li class="lisignout" style="display:none">
+					<a href="#" onClick="javascript:FedLogout();return false;" data-transition="slide">Sign Out</a>
+				</li>
+			
+
+			<li data-role="list-divider">Account Services</li>
+				<li>
+					<a href="#" onClick="javascript:pageTranslate('myaccountp');return false;">My Account</a>
+				</li>
+				<li>
+					<a href="#" onClick="javascript:pageTranslate('makeapayment');return false;">Make a Payment</a>
+				</li>				
+				<li>
+					<a href="#" onClick="javascript:pageTranslate('myprograms');return false;">My Programs</a>
+				</li>
+				<li>
+					<a href="#" onClick="javascript:pageTranslate('myenergyuse');return false;">My Energy Use</a>
+				</li>
+		
+	         <li data-role="list-divider">Settings</li>
+             <li>
+					<a href="#" onClick="javascript:pageTranslate('myprofile');return false;">My Profile</a>
+				</li>
+             <li>
+					<a href="#" onClick="javascript:pageTranslate('mynotifications');return false;">My Notifications</a>
+				</li>
+				
+            
+			<li data-role="list-divider">Outages</li>
+                 <li>
+					<a href="#" onClick="javascript:OutagesClick();return false;">Report an Outage</a>
+				</li>
+                <li>
+					<a href="#"  onClick="javascript:pageTranslate('outages');return false;">Current Outage Status</a>
+				</li>				
+				<li>
+					<a href="http://outagemap.bge.com/m.html">View Outage Map</a>
+				</li>
+		
+
+			<li data-role="list-divider">Support</li>
+                <li>
+					<a href="#" onClick="javascript:pageTranslate('aboutus');return false;" >About us</a>
+				</li>	
+				<li>
+					<a href="#" onClick="javascript:ContactClick();return false;">Contact us</a>
+				</li>							
+			</ul>
+
+
+</div> <!-- /panel -->
+
+<div data-role="header" class="bgeheader">
+	<a href="#panel" class="panel-go"  data-role="none"></a>
+	<div class="center-wrapper"><div class="logo" onClick="javascript:pageTranslate('home');return false;"></div></div>     
+	<a data-rel="popup" href="#global-notify"  data-role="none" class="notif-on" data-position-to="window" data-bind="visible:globalAlert() !='ERROR'"></a>
+</div>
+<div data-role="content" class="notif-alert notify-alert" data-bind="visible:!alertClosed() && accountalert()!= '' && accountalert()!= 'NO_MESSAGE'">
+				<i class="sprites close-icon-sm"></i>
+				<p class="accountNotifMsg" data-bind="html:accountalert()"></p>
+</div>			
+
+<div data-role="content">
+<h2 id='notifsummaryheader'>SET NOTIFICATION</h2>
+<div id="main" class="border-container">
+    
+                <div class="content">
+                             
+
+                             <div id="service-account" class="service-account serviceaddressclass">
+	       								 <!--<span>Account #: <strong><label id="lblaccountid"></label></strong></span></br>
+       									  <span>Address : <strong><label id="uiPremiseSingle" ></label>
+	                                          <label id="uiNoPremise"></label>
+											  <label id="uiPremise">
+											            <select id="uiPremiseSelect">
+											           </select>
+											  </label></strong>
+										  </span>-->
+
+									</div>
+                
+                			 <p id="notificationSingle" style="text-align:center;font-weight:bold;text-transform: capitalize;" class="hidden"></p>
+                			  	<div id='notimulti' data-role="fieldcontain" style="text-transform: capitalize;" class='firstUpperCase'>
+									<select data-native-menu="false" id="notificationMulti" name="electricty"  onchange="changeNotificationChannels()">
+									</select>
+								</div>
+								<h3 id="uiUpdateError" style="color:red" class='hidden'>This feature is temporarily unavailable. Please try again later.</h3>
+<form id="notificationsummary-form" action="notification-confirm.html"  class="profile-info" data-transition="slide">
+							<div id="payment-overview"  >
+								
+								   <fieldset id='fieldsetEmail' class='hidden' >
+									   <h3>Email Addresses</h3>			
+										<ul id='uiNotificationChannelsEmail' data-role="listview" data-split-icon="arrow-r" data-split-theme="a" data-inset="true" class="nopadding notifCheck">
+												<li><div class="noborder" ><fieldset><label><input type="checkbox" name="checkbox-2" id="checkbox-2"/>Email <div style="float:right">Test Description</div></label></fieldset></div></li>
+											 </ul>
+										</div>
+								
+									</fieldset>
+									
+									<fieldset id='fieldsetSMS'  class='hidden'>					
+										<h3>Text/SMS</h3>
+										<ul id='uiNotificationChannelsSMS' data-role="listview" data-split-icon="arrow-r" data-split-theme="c" data-inset="true" class="nopadding notifCheck">
+										</ul>					
+									</fieldset>
+									
+									<fieldset id='fieldsetPhone' class='hidden'>					
+										<h3>Phone Numbers</h3>
+		
+										<ul id='uiNotificationChannelsPhone' data-role="listview" data-split-icon="arrow-r" data-split-theme="c" data-inset="true" class="nopadding notifCheck">
+										</ul>					
+									</fieldset>
+									
+									
+									<div id='fieldsetBP'  class='hidden'>
+									<h3>Email Address : <span id='emailIdforChannel' style="font-size:13px;color:#939393;font-weight:normal">yours@constellation.com</span></h3>	
+																								
+										<ul id='uiNotificationChannels' data-role="listview" data-split-icon="arrow-r" data-split-theme="c" data-inset="true" class="nopadding notifCheck">
+											 	<!--<input type="checkbox" name="checkbox-1" data-theme="d" id="checkbox-1"/>
+													<input type="checkbox" name="checkbox-2" data-theme="d" id="checkbox-2"/>
+													<label for="checkbox-2">
+														 	 Notify me when total amount due is greater than my recurring payasdfadfadadment maximum amount.
+													</label>-->
+											 
+										</ul>	
+						</div>
+									<!--<fieldset  id="optoutfieldset">		
+																<input type="checkbox" id='optoutdefault'/> 
+																 <label for="optoutdefault"><div>Unsubscribe from all optional notifications</div>
+																	</label>
+									</fieldset>-->
+							<h3 id='uiMandatoryAsterix' class='hidden' style="color:black;text-align:left;text-shadow:none;font-weight:normal;">Mandatory notifications are identified by an asterisk (*)</h3>					 
+							<div class="ui-grid-a" id='uiNotificationsButtons'>
+									<div class="ui-block-a">
+										<button type="submit" data-theme="a">SAVE</button>
+									</div>
+									<div class="ui-block-b">
+										<a data-role="button" href="notifications.html" data-transition="slide">
+											CANCEL
+										</a>
+									</div>
+							</div>
+							<div id='uiBPNotificationsButtons' class='hidden'>
+								
+										<a data-role="button" href="notifications.html" data-transition="slide">
+											CANCEL
+										</a>
+								
+							</div>
+
+						
+
+					</form>
+					
+					<div class="divbullet">
+                      <span class="cbullet">
+						<a  data-rel="popup" href="#mainnotificationsummary" data-inline="true">
+							Manage notifications on the full site</a>
+                       </span>
+					</div>
+</div>
+</div>
+<!-------Dialogs----->
+<div data-role="popup" id="mainnotificationsummary" data-overlay-theme="a" style="width:250px; max-width:250px;"  data-dismissible="false" >
+    <div data-role="header">
+			<h1 class="popup" data-bind="text:findGetMessage('Notifications_Header')"></h1>
+
+		</div>
+	<div class="border-container">
+		<p class="popupscroll" data-bind="html:findGetMessage('SIGNIN_MSG')"></p>
+		<a data-bind="attr: {href:findGetMessage('Notifications_URL')}" data-role="button" data-theme="a">CONTINUE</a>       
+		<a href="#" data-role="button" data-rel="back" data-theme="c">CANCEL</a> 
+	</div>
+</div><!-------End of Dialogs----->
+
+	
+<div data-role="content">
+        <div class="indexicons" style="display:none">
+                <a href="#" onclick="javascript:viewFullSite();return false;" data-role="button" data-inline="true" data-icon="full-site" >View Full Site</a>
+                <a data-role="button" data-inline="true" data-icon="contact-us"  href="#" onclick="javascript:ContactClick();return false;">Contact Us</a>                
+            </div>	
+	<div class="social">
+
+				<a href="http://facebook.com/" target="new" class="facebook"></a>
+
+				<a href="http://twitter.com/mybge" target="new" class="flickr"></a>
+
+				<a href="http://twitter.com/mybge" target="new" class="twitter"></a>
+
+				<a href="http://youtube.com/" target="new" class="youtube"></a>
+
+				<a href="http://twitter.com/mybge" target="new" class="linkedin"></a>
+
+			</div>
+            <div class="fullsite">
+                <a  href="#" onclick="javascript:viewFullSite();return false;" >View Full Site</a> |
+                <a  href="#" onclick="javascript:ContactClick();return false;">Contact Us</a> 
+                
+            </div>
+
+	<p class="legal">&copy; 2013 Baltimore Gas and Electric Company.  All Rights Reserved.</p>
+
+</div><!-- /footer -->
+<!-------Dialogs----->
+
+<div  data-role="popup" id="global-notify" class="globalalert" data-overlay-theme="a" style="background:rgb(254, 247, 190)">
+	<a href="#" data-rel="back" data-role="button" data-theme="c" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+    <p style="margin:10px" data-bind="html:globalAlert()"></p>
+</div>
+
+
+<div data-role="popup" data-overlay-theme="a" id="disconnectnotice" style="width:250px; max-width:350px;"  data-dismissible="false" >
+	
+		<div data-role="header">
+			<h1 class="popup">Disconnect Notice</h1>
+		</div>
+		<div class="border-container">
+			<p data-bind="text:findGetMessage('DisconnectNotice_MSG')"></p>
+			<a data-bind="attr: { href:findGetMessage('DisconnectNotice_URL')}" onclick="javascript:viewFullSite();" data-role="button" data-theme="a">OK</a>       
+			<a href="#" data-role="button" data-rel="back" data-theme="c">CANCEL</a> 
+		</div>
+	</div>
+	
+
+</div><!-- /page -->
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="images\" Type="ElementManifest" />
+    <ProjectItemFile Source="bg.png" Target="images\" Type="ElementFile" />
+    <ProjectItemFile Source="bg-2x.png" Target="images\" Type="ElementFile" />
+    <ProjectItemFile Source="sprites.png" Target="images\" Type="ElementFile" />
+    <ProjectItemFile Source="sprites2x.png" Target="images\" Type="ElementFile" />
+    <ProjectItemFile Source="notifications-icon.png" Target="images\" Type="ElementFile" />
+    <ProjectItemFile Source="notifications-icon-active.png" Target="images\" Type="ElementFile" />
+    <ProjectItemFile Source="loading.gif" Target="images\" Type="ElementFile" />
+    <ProjectItemFile Source="edit.jpg" Target="images\" Type="ElementFile" />
+    <ProjectItemFile Source="dropdown.png" Target="images\" Type="ElementFile" />
+    <ProjectItemFile Source="AstroIconSprite.png" Target="images\" Type="ElementFile" />
+    <ProjectItemFile Source="MeterImage.png" Target="images\" Type="ElementFile" />
+    <ProjectItemFile Source="noData.png" Target="images\" Type="ElementFile" />
+    <ProjectItemFile Source="ajax-loader.gif" Target="images\" Type="ElementFile" />
+    <ProjectItemFile Source="icons-18-white.png" Target="images\" Type="ElementFile" />
+    <ProjectItemFile Source="onetime.gif" Target="images\" Type="ElementFile" />
+    <ProjectItemFile Source="reccurring.gif" Target="images\" Type="ElementFile" />
+    <ProjectItemFile Source="bge-logo.png" Target="images\" Type="ElementFile" />
+    <ProjectItemFile Source="wu-logo.png" Target="images\" Type="ElementFile" />
+    <ProjectItemFile Source="edit1.png" Target="images\" Type="ElementFile" />
+    <ProjectItemFile Source="offline.png" Target="images\" Type="ElementFile" />
+  </Files>
+</ProjectItem>
